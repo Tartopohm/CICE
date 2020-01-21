@@ -185,6 +185,11 @@ else if (${ICE_MACHINE} =~ testmachine*) then
 cat >> ${jobfile} << EOFR
 ./cice >&! \$ICE_RUNLOG_FILE
 EOFR
+#=======
+else if (${ICE_MACHINE} =~ beta*) then
+cat >> ${jobfile} << EOFR
+./cice >&! \$ICE_RUNLOG_FILE
+EOFR
 
 #=======
 else if (${ICE_MACHINE} =~ travisCI*) then
